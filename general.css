@@ -39,7 +39,7 @@ Paragraph default: 1.6
 -- Accents:
 -- Greys: 
 #888;
-#767676; lightst grey allowed on #fff;
+#767676; lightst grey allowed on
 #6F6F6F; lightest grey allowed on
 #555;
 #333;
@@ -70,6 +70,7 @@ html {
   /* 10px / 16px = 0.0625 = 62.5% */
   /* Percentage of user's browser font-size setting */
   font-size: 62.5%;
+  overflow-x: hidden;
 }
 
 body {
@@ -77,15 +78,18 @@ body {
   line-height: 1;
   font-weight: 400;
   color: #555555;
-}
+  overflow: hidden;
 
+  /* Only works if there is nothing absolutely positioned in relation to body*/
+  overflow-x: hidden;
+}
 /****************************/
 /* GENERAL REUSABLE COMPONENTS */
 /****************************/
 
 .container {
   /* 1140px */
-  max-width: 130rem;
+  max-width: 120rem;
   padding: 0 3.2rem;
   margin: 0 auto;
 }
